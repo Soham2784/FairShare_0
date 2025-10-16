@@ -1,0 +1,260 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fade-in 400ms ease-out both; }
+
+/* Page and hero background utilities */
+.page-bg {
+  background-image: url('/bg-page.png'); /* Save your first image as public/bg-page.png */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-bg {
+  background-image: url('/bg-hero.png'); /* Save your second image as public/bg-hero.png */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Trip Expense Splitter Design System - Modern Fintech Theme */
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --background: 220 15% 97%;
+    --foreground: 220 15% 15%;
+
+    /* Primary Brand Colors - Deep Blue Gradient */
+    --primary: 225 80% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-gradient: linear-gradient(135deg, hsl(225 80% 35%) 0%, hsl(250 70% 45%) 100%);
+
+    /* Secondary Colors - Vibrant Accent */
+    --secondary: 280 65% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-gradient: linear-gradient(135deg, hsl(280 65% 60%) 0%, hsl(260 70% 65%) 100%);
+
+    /* AI Feature Colors */
+    --ai-primary: 200 100% 50%;
+    --ai-secondary: 180 100% 60%;
+    --ai-gradient: linear-gradient(135deg, hsl(200 100% 50%) 0%, hsl(180 100% 60%) 100%);
+
+    /* Success/Money Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 96%;
+
+    /* Warning/Debt Colors */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 96%;
+
+    /* Danger/Negative Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 84% 96%;
+
+    /* Neutral Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 15% 45%;
+    --accent: 220 15% 95%;
+    --accent-foreground: 220 15% 20%;
+
+    /* Interactive Elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 225 80% 35%;
+
+    /* Expense Categories */
+    --category-food: 25 95% 53%;
+    --category-transport: 217 91% 60%;
+    --category-accommodation: 142 69% 58%;
+    --category-entertainment: 271 81% 56%;
+    --category-shopping: 340 82% 52%;
+    --category-other: 220 15% 65%;
+
+    --radius: 0.75rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 220 15% 95%;
+    --card: 220 15% 12%;
+    --card-foreground: 220 15% 95%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 15% 65%;
+    --accent: 220 15% 18%;
+    --accent-foreground: 220 15% 90%;
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer components {
+  /* Gradient Utilities */
+  .bg-primary-gradient {
+    background: var(--primary-gradient);
+  }
+  
+  .bg-secondary-gradient {
+    background: var(--secondary-gradient);
+  }
+  
+  .bg-ai-gradient {
+    background: var(--ai-gradient);
+  }
+
+  /* Expense Category Colors */
+  .expense-food { @apply bg-orange-500; }
+  .expense-transport { @apply bg-blue-500; }
+  .expense-accommodation { @apply bg-green-500; }
+  .expense-entertainment { @apply bg-purple-500; }
+  .expense-shopping { @apply bg-pink-500; }
+  .expense-other { @apply bg-gray-500; }
+
+  /* Animation Classes */
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+
+  /* Glass Effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  /* Money Display */
+  .money-positive {
+    @apply text-green-600 font-semibold;
+  }
+  
+  .money-negative {
+    @apply text-red-600 font-semibold;
+  }
+  
+  .money-neutral {
+    @apply text-muted-foreground font-medium;
+  }
+}
+
+@layer utilities {
+  /* Text Gradients */
+  .text-primary-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-ai-gradient {
+    background: var(--ai-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Custom Shadows */
+  .shadow-glow {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  
+  .shadow-ai-glow {
+    box-shadow: 0 0 20px hsl(var(--ai-primary) / 0.3);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse animation for AI elements */
+@keyframes pulse-ai {
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsl(var(--ai-primary) / 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px hsl(var(--ai-primary) / 0);
+  }
+}
+
+.animate-pulse-ai {
+  animation: pulse-ai 2s infinite;
+}
