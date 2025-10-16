@@ -1,5 +1,6 @@
 # Welcome to your Expense Splitter Project
 
+Expense Splitter is a web application that helps users manage and split expenses easily among friends, roommates, or colleagues. It allows users to add expenses, track payments, and calculate individual shares automatically. The app provides a clear overview of who owes whom and helps prevent confusion in group spending. Built with React, TypeScript, and Tailwind CSS, it offers a fast and interactive user interface. Supabase is used for backend services like authentication and database management. With modern tools like Vite and shadcn-ui, the project ensures smooth development and a responsive design. This project is ideal for anyone looking to simplify shared expense tracking.
 
 
 
