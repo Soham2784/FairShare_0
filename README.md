@@ -1,16 +1,12 @@
 # Welcome to your Expense Splitter Project
 
-## Project info
 
-**URL**: https://lovable.dev/projects/c36414a8-0d32-4cab-a56c-5687936a516a
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c36414a8-0d32-4cab-a56c-5687936a516a) and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
